@@ -17,6 +17,8 @@ body {
     width: 100%;
     align: auto;
     margin: auto;
+    border: 2px solid black;
+    margin: 20px
   }
 
   main {
@@ -63,6 +65,7 @@ body {
     border-radius: 50%;
     margin: 15% auto;
     grid-column: 2/3;
+    border: solid turquoise
   }
 
   h1 {

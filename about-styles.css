@@ -1,0 +1,123 @@
+main {
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#one {
+background-color: lightblue;
+}
+
+#two {
+background-color: skyblue;
+}
+
+#three {
+background-color: #0066b2;
+}
+
+#one, #two, #three {
+    width: 200px;
+    height: 30px;
+    margin: 10px auto;
+}
+
+h2, p {
+    text-align: center;
+    color: white;
+    max-width: 200px
+
+}
+
+section {
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+
+/* Bars */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "main"
+    "g-one"
+    "g-two"
+    "g-three";
+}
+
+/* End Bars */
+
+main {grid-area: main;}
+.g-one {grid-area: g-one;}
+.g-two {grid-area: g-two;}
+.g-three {grid-area: g-three;}
+
+/* Media Queries */
+
+@media (min-width: 576px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "main main"
+        "g-one g-two"
+        "g-three .";
+    }
+    #one, #two, #three {
+        width: 300px;
+        height: 50px;
+        margin: 10px auto;
+    }
+   
+h2, p {
+    max-width: 300px
+
+
+}
+
+main {
+    font-size: 60px;
+}
+
+}
+
+
+@media (min-width: 992px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "main main main"
+        "g-one g-two g-three";
+        height: 100vh;
+    }
+main {
+    background-color: white;
+    font-size: 60px;
+}
+section {
+    background-color: black;
+}
+
+h2, p {
+    color: white;
+
+}
+
+}

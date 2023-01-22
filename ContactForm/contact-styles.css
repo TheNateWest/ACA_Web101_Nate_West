@@ -1,4 +1,13 @@
 body {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(3, 49, 3);
     color: white;
+    align-items: center;
 } 
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
